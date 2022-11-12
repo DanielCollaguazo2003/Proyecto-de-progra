@@ -14,14 +14,14 @@ import java.util.List;
 public class Subject {
 
     private List<Observador> observadores = new ArrayList<>();
-    private double estado;
+    private boolean estado;
     private String nombre = null;
 
-    public double getEstado() {
+    public boolean getEstado() {
         return estado;
     }
 
-    public void setEstado(double estado) {
+    public void setEstado(boolean estado) {
         this.estado = estado;
         notificarTodosObservadores();
     }
