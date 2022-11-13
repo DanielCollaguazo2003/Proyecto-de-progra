@@ -74,6 +74,7 @@ public class Bateria extends Observador {
             cronometro();
             temporizador();
 
+            
         }
 
     }
