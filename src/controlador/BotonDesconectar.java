@@ -12,23 +12,24 @@ import vista.VentanaBateria;
  *
  * @author Daniel Collaguazo Malla
  */
-public class BotonConectar implements ActionListener {
+public class BotonDesconectar implements ActionListener {
 
     VentanaBateria v;
     Bateria bateria;
 
-    public BotonConectar(VentanaBateria v, Bateria bateria) {
+    public BotonDesconectar(VentanaBateria v, Bateria bateria) {
         this.v = v;
         this.bateria = bateria;
     }
+    
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        Subject sujetoCambioEstadoBateria = new Subject();
-
-        bateria.agregar(sujetoCambioEstadoBateria);
-
-        sujetoCambioEstadoBateria.setEstado(true);
+    public void actionPerformed(ActionEvent e) {        
+        Subject sujetoCambioEstadoDesconectarBateria = new Subject();
+        
+        bateria.agregar(sujetoCambioEstadoDesconectarBateria);
+        
+        sujetoCambioEstadoDesconectarBateria.setEstado(false);
     }
 
 }

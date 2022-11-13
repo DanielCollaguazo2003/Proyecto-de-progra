@@ -4,6 +4,8 @@
  */
 package controlador;
 
+import java.util.Timer;
+import java.util.TimerTask;
 import vista.VentanaBateria;
 
 /**
@@ -14,11 +16,13 @@ public class Inicio {
     
     public static void main(String[] args) {
         VentanaBateria v = new VentanaBateria();
-        
-        BotonConectar bc = new BotonConectar(v);
+        Bateria bateria = new Bateria(v);
+        Tiemertarea tm = new Tiemertarea(v);
+        BotonConectar bc = new BotonConectar(v, bateria);
+        BotonDesconectar bd = new BotonDesconectar(v, bateria);
         
         v.botonConectar(bc);
-        
+        v.botonDesconectar(bd);
         v.setVisible(true);
     }
 }

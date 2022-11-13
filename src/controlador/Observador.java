@@ -4,6 +4,8 @@
  */
 package controlador;
 
+import vista.VentanaBateria;
+
 /**
  *
  * @author Daniel Collaguazo Malla
@@ -11,7 +13,7 @@ package controlador;
 public abstract class Observador {
 
     protected Subject sujeto;
-
+    protected  VentanaBateria viBateria;
     public abstract void actualizar();
     public abstract void agregar(Subject subject);
 
